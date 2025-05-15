@@ -1,4 +1,5 @@
-﻿using AgenticRAG.Models;
+﻿using AgenticRAG.Constants;
+using AgenticRAG.Models;
 using Azure;
 using Azure.Identity;
 using Azure.Search.Documents;
@@ -19,13 +20,15 @@ public class AzureSearchService
 
     public AzureSearchService()
     {
-        _indexClient = new SearchIndexClient(new Uri("https://azure-ai-search-medium.search.windows.net"), new AzureKeyCredential("<ai-search-key>"));
-        _indexName = "hotels-data-index";
+        _indexClient = new SearchIndexClient(new Uri(
+            Environment.GetEnvironmentVariable(EnvVariables.AzureAISearchUrlEnvVar)),
+            new AzureKeyCredential(Environment.GetEnvironmentVariable(EnvVariables.AzureAISearchKeyEnvVar)));
+            _indexName = "hotels-data-index";
 
         azureOpenAITextEmbeddingGenerationService = new(
             deploymentName: "text-embedding-3-small",
-            endpoint: "https://<instance_name>.openai.azure.com",
-            apiKey: "<key>"
+             Environment.GetEnvironmentVariable(EnvVariables.AzureOpenAIUrlEnvVar),
+             Environment.GetEnvironmentVariable(EnvVariables.AzureOpenAIKeyEnvVar)
          );
 
     }

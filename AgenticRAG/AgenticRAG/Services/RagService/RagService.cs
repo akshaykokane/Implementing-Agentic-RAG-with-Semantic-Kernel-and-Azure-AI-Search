@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using AgenticRAG.Constants;
 using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Agents;
 using Microsoft.SemanticKernel.ChatCompletion;
@@ -17,8 +18,8 @@ namespace AgenticRAG.Rag.Impl
             var builder = Kernel.CreateBuilder();
             builder.AddAzureOpenAIChatCompletion(
                             "GPT4ov1",
-                            "https://<instance_name>.openai.azure.com/",
-                            "<key>"
+                            Environment.GetEnvironmentVariable(EnvVariables.AzureOpenAIUrlEnvVar),
+                            Environment.GetEnvironmentVariable(EnvVariables.AzureOpenAIKeyEnvVar)
                             );
 
 

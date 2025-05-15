@@ -25,7 +25,11 @@
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7037;http://localhost:5020",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AZURE_OPENAI_URL": "https://<RESOURCENAME>.openai.azure.com",
+        "AZURE_OPENAI_KEY": "<ADD_KEY>",
+        "AZURE_AI_SEARCH_URL": "https://<RESOURCENAME>.search.windows.net",
+        "AZURE_AI_SEARCH_KEY": "<ADD_KEY>"
       },
       "dotnetRunMessages": true
     },
@@ -34,7 +38,11 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AZURE_OPENAI_URL": "https://<RESOURCENAME>.openai.azure.com",
+        "AZURE_OPENAI_KEY": "<ADD_KEY>",
+        "AZURE_AI_SEARCH_URL": "https://<RESOURCENAME>.search.windows.net",
+        "AZURE_AI_SEARCH_KEY": "<ADD_KEY>"
       }
     }
   }

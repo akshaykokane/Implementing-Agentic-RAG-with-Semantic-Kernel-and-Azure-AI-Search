@@ -26,6 +26,7 @@
     <None Remove="Models\" />
     <None Remove="Plugins\" />
     <None Remove="Services\RagService\" />
+    <None Remove="Constants\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
@@ -33,6 +34,7 @@
     <Folder Include="wwwroot\" />
     <Folder Include="Plugins\" />
     <Folder Include="Services\RagService\" />
+    <Folder Include="Constants\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\" />
