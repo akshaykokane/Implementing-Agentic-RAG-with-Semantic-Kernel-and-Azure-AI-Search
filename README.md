@@ -19,16 +19,16 @@ This repository demonstrates how to build a **Retrieval-Augmented Generation (RA
 
 ### 🔧 Configuration
 
-Before running the project, you need to replace placeholder values with your actual Azure credentials.
+Before running the project, you need to replace placeholder values with your actual Azure credential in [launchSettings.json](https://github.com/akshaykokane/Implementing-Agentic-RAG-with-Semantic-Kernel-and-Azure-AI-Search/blob/main/AgenticRAG/AgenticRAG/Properties/launchSettings.json)
 
-Open `RagService.cs` in the `Services` folder and update the following section with your Azure OpenAI values:
-
-```csharp
-builder.AddAzureOpenAIChatCompletion(
-    "GPT4ov1",                                 // Deployment name (e.g., "gpt-4")
-    "https://<your-instance>.openai.azure.com/", // Your Azure OpenAI endpoint
-    "<your-api-key>"                           // Your Azure OpenAI API key
-);
+```
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AZURE_OPENAI_URL": "https://<RESOURCENAME>.openai.azure.com",
+        "AZURE_OPENAI_KEY": "<ADD_KEY>",
+        "AZURE_AI_SEARCH_URL": "https://<RESOURCENAME>.search.windows.net",
+        "AZURE_AI_SEARCH_KEY": "<ADD_KEY>"
+      },
 ```
 
 Also, ensure your Azure AI Search setup and embedding model configurations are correctly referenced in your `AzureSearchService.cs`.
