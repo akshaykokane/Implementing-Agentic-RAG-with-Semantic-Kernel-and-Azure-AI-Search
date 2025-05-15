@@ -23,10 +23,10 @@ public class AzureSearchService
         _indexClient = new SearchIndexClient(new Uri(
             Environment.GetEnvironmentVariable(EnvVariables.AzureAISearchUrlEnvVar)),
             new AzureKeyCredential(Environment.GetEnvironmentVariable(EnvVariables.AzureAISearchKeyEnvVar)));
-            _indexName = "hotels-data-index";
+            _indexName = Environment.GetEnvironmentVariable(EnvVariables.IndexName);
 
         azureOpenAITextEmbeddingGenerationService = new(
-            deploymentName: "text-embedding-3-small",
+             deploymentName: Environment.GetEnvironmentVariable(EnvVariables.EmbeddingDeploymentName),
              Environment.GetEnvironmentVariable(EnvVariables.AzureOpenAIUrlEnvVar),
              Environment.GetEnvironmentVariable(EnvVariables.AzureOpenAIKeyEnvVar)
          );

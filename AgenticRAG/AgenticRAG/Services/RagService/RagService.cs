@@ -17,7 +17,7 @@ namespace AgenticRAG.Rag.Impl
             
             var builder = Kernel.CreateBuilder();
             builder.AddAzureOpenAIChatCompletion(
-                            "GPT4ov1",
+                            Environment.GetEnvironmentVariable(EnvVariables.GPTModelDeploymentname),
                             Environment.GetEnvironmentVariable(EnvVariables.AzureOpenAIUrlEnvVar),
                             Environment.GetEnvironmentVariable(EnvVariables.AzureOpenAIKeyEnvVar)
                             );

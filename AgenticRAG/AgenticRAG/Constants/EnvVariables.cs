@@ -11,6 +11,11 @@ namespace AgenticRAG.Constants
 
         public const string AzureAISearchKeyEnvVar = "AZURE_AI_SEARCH_KEY";
 
+        public static string EmbeddingDeploymentName = "EMBEDDING_DEPLOYMENT_NAME";
+
+        public static string IndexName = "INDEX_NAME";
+
+        public static string GPTModelDeploymentname = "GPT_DEPLOYMENT_NAME";
     }
 }
 
