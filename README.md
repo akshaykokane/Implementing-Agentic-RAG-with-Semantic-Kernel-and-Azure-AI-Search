@@ -27,7 +27,10 @@ Before running the project, you need to replace placeholder values with your act
         "AZURE_OPENAI_URL": "https://<RESOURCENAME>.openai.azure.com",
         "AZURE_OPENAI_KEY": "<ADD_KEY>",
         "AZURE_AI_SEARCH_URL": "https://<RESOURCENAME>.search.windows.net",
-        "AZURE_AI_SEARCH_KEY": "<ADD_KEY>"
+        "AZURE_AI_SEARCH_KEY": "<ADD_KEY>",
+        "EMBEDDING_DEPLOYMENT_NAME": "<REPLACE_WITH_DEPLOYMENT_NAME>",
+        "GPT_DEPLOYMENT_NAME": "<LLM_MODEL_DEPLOYMENT_NAME>",
+        "INDEX_NAME": "<AI_SEARCH_INDEX_NAME>"
       },
 ```
 
